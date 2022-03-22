@@ -1,0 +1,20 @@
+<table class="table table-hover" style="margin-top: 30px; margin-bottom: 30px;">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Thumbnail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (let i = 0; i < productList.length; i++) { %>
+        <tr>
+            <th scope="row"><%=productList[i].id%></th>
+            <td><%=productList[i].title%></td>
+            <td><%=productList[i].price%></td>
+            <td><img src="<%=productList[i].thumbnail%>" alt="imagen de producto" style="width:40px;height:40px"></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>

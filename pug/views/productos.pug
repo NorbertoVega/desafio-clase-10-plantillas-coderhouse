@@ -1,0 +1,26 @@
+extends ./layouts/index.pug 
+
+block content
+    div(style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:60px;")
+        div(style="width:70%;background:#e6e6e6;border-radius:8px;box-shadow:0 0 40px -10px;padding: 20px;")
+            if emptyList
+                h1(style="margin-top: 30px; margin-bottom: 30px;")='No hay productos'
+            else
+                h1='Todos los Prodcuctos'
+                table( class="table table-hover" style="margin-top: 30px; margin-bottom: 30px;" )
+                    thead
+                        tr
+                            th(scope="col")='Id'
+                            th(scope="col")='Title'
+                            th(scope="col")='Price'
+                            th(scope="col")='Thumbnail'
+                    tbody
+                        each item in products
+                            tr
+                                th(scope="row")= item.id
+                                td= item.title
+                                td= item.price
+                                td
+                                    img(src=item.thumbnail alt="imagen de producto" style="width:30px;height:30px; margin-left:50px")
+                a( href="../")
+                    button(style="float:right;padding:8px 12px;font-family:'Montserrat',sans-serif;border: solid #6c6c71;background:#e6e6e6;color:#5a5a6e;cursor:pointer;transition:all .3s;box-shadow:0 0 40px -10px;")='Cargar un producto'

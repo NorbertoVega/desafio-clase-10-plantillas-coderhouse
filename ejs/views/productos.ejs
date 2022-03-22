@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs'); %>
+</head>
+<body style="background-color: #F6E7D8;">
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:60px;">
+        <div style="width: 70%;background:#e6e6e6;border-radius:8px;box-shadow:0 0 40px -10px;padding: 20px;">
+            <% if (emptyList) { %>
+            <h1 style="margin-top: 30px; margin-bottom: 30px;">No hay productos</h1>
+            <% } else { %>
+            <h1>Todos los Prodcuctos</h1>
+            <%- include('partials/tabla.ejs'); %>
+            <% } %>
+            <a href="../"><button 
+            style="margin: 32px;
+                float:right;
+                padding:8px 12px;
+                font-family:'Montserrat',sans-serif;
+                border: solid #6c6c71;
+                background:#e6e6e6;
+                color:#5a5a6e;
+                cursor:pointer;
+                transition:all .3s;
+                box-shadow:0 0 40px -10px;">Cargar un producto</button></a>
+        </div>
+    </div>
+</body>
+</html>

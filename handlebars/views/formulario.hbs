@@ -1,0 +1,21 @@
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:60px;">
+    <div style="width:500px;background:#e6e6e6;border-radius:8px;box-shadow:0 0 40px -10px;padding: 20px;">
+        <h1 style="text-align: center;color:#78788c;margin-bottom: 16px;">Nuevo Producto</h1>
+        <form action="/api/productos" method="post" class="form-group" style="margin-top:25px; margin-bottom:25px">
+            <div>
+                <label for="title" style="margin-bottom:8px;">Titulo</label>
+                <input type="text" name="title" id="title" style="width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2;margin-bottom: 30px;"><br>
+            </div>
+            <div>
+                <label for="price" style="margin-bottom:8px;">Precio</label>
+                <input type="text" name="price" id="price" style="width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2;margin-bottom: 30px;"><br>
+            </div>
+            <div>
+                <label for="thumbnail" style="margin-bottom:8px;">Thumbnail</label>
+                <input type="text" name="thumbnail" id="thumbnail" style="width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #bebed2;margin-bottom: 30px;"><br>
+            </div>
+            <input type="submit" value="Agregar producto" style="float:right;padding:8px 12px;font-family:'Montserrat',sans-serif;border: solid #6c6c71;background:#e6e6e6;color:#5a5a6e;cursor:pointer;transition:all .3s;box-shadow:0 0 40px -10px;">
+        </form>
+    </div>
+    <a href="./api/productos"><button style="margin: 32px;float:right;padding:8px 12px;font-family:'Montserrat',sans-serif;border: solid #6c6c71;background:#e6e6e6;color:#5a5a6e;cursor:pointer;transition:all .3s;box-shadow:0 0 40px -10px;">Ver todos los productos</button></a>
+</div>
